@@ -1,244 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Loveleen Saini – Resume</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(120deg, #e0c3fc, #8ec5fc);
-      color: #333;
-      scroll-behavior: smooth;
-      transition: all 0.3s ease;
-    }
-    body.dark {
-      background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
-      color: #eee;
-    }
-    .glass-container {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 20px;
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-    }
-    header {
-      text-align: center;
-      animation: fadeInDown 1s ease-out;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-    h1::after {
-      content: '|';
-      animation: blink 1s infinite step-start;
-    }
-    @keyframes blink {
-      50% { opacity: 0; }
-    }
-    .contact a {
-      color: inherit;
-      text-decoration: none;
-      margin: 0 5px;
-    }
-    .nav-buttons {
-      margin-top: 1rem;
-    }
-    .nav-buttons button,
-    .nav-buttons a button {
-      background-color: #4b6cb7;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      padding: 0.5rem 1rem;
-      margin: 0.3rem;
-      cursor: pointer;
-      font-weight: 600;
-      transition: transform 0.2s, background-color 0.3s;
-    }
-    .nav-buttons button:hover {
-      background-color: #182848;
-      transform: scale(1.05);
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin: 1.5rem 0;
-      flex-wrap: wrap;
-    }
-    nav a {
-      text-decoration: none;
-      padding: 0.6rem 1.2rem;
-      border-radius: 20px;
-      background: #ffffff33;
-      backdrop-filter: blur(4px);
-      color: #222;
-      font-weight: 600;
-      transition: all 0.3s ease;
-    }
-    body.dark nav a {
-      color: #eee;
-    }
-    nav a:hover {
-      background: #ffffff55;
-      transform: scale(1.05);
-    }
-    section {
-      margin-bottom: 2rem;
-      animation: fadeInUp 1s ease-out;
-    }
-    .entry h3 {
-      margin-bottom: 0.4rem;
-      color: #4b6cb7;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      max-width: 500px;
-      margin: auto;
-    }
-    input, textarea {
-      padding: 0.8rem;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
-    textarea {
-      resize: vertical;
-    }
-    button[type="submit"] {
-      background-color: #4b6cb7;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      padding: 0.8rem;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    button[type="submit"]:hover {
-      background-color: #182848;
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark');
-    }
-  </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Loveleen – Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark');
+        }
+    </script>
 </head>
 <body>
-  <div class="glass-container">
-    <header>
-      <h1 id="typing">Loveleen Saini</h1>
-      <p class="contact">
-        📞 <a href="tel:+14377333345">+1 (437)-733-3345</a> |
-        📧 <a href="mailto:sainiloveleen328@gmail.com">sainiloveleen328@gmail.com</a> |
-        🔗 <a href="https://www.linkedin.com/in/loveleen-saini-02038623a" target="_blank">LinkedIn</a> |
-        🔙 <a href="https://github.com/loveleen1saini" target="_blank">GitHub</a>
-      </p>
-      <div class="nav-buttons">
-        <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
-        <a href="Loveleen_Resume.pdf" download><button>📄 Download Resume</button></a>
-        <a href="#contact"><button>💬 Contact Me</button></a>
-      </div>
-    </header>
+    <div class="glass-container">
+        <header>
+            <h1 id="typing">Loveleen</h1>
+            <p class="contact">
+                📞 <a href="tel:+14377333345" aria-label="Call me">+1 (437)-733-3345</a> |
+                📧 <a href="mailto:sainiloveleen328@gmail.com" aria-label="Email me">sainiloveleen328@gmail.com</a> |
+                🔗 <a href="https://www.linkedin.com/in/loveleen-saini-02038623a" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn</a> |
+                🔙 <a href="https://github.com/loveleen1saini" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub</a>
+            </p>
+            <div class="nav-buttons">
+                <button onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌙 Toggle Dark Mode</button>
+                <a href="Loveleen_Resume.pdf" download aria-label="Download my resume"><button>📄 Download Resume</button></a>
+                <a href="#contact" aria-label="Go to the contact section"><button>💬 Contact Me</button></a>
+            </div>
+        </header>
 
-    <nav>
-      <a href="#skills">Skills</a>
-      <a href="#education">Education</a>
-      <a href="#projects">Projects</a>
-      <a href="#certifications">Certifications</a>
-    </nav>
+        <nav>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#certifications">Certifications</a>
+        </nav>
 
-    <main>
-      <section id="skills">
-        <h2>Skills</h2>
-        <p><strong>Proficiencies:</strong> Business Analysis & Requirements Elicitation, Stakeholder Communication & Collaboration, Data Modeling (Relational) & SQL Querying/Optimization, Data Analysis & Interpretation, Data Visualization Principles, Problem-Solving & Critical Thinking, Understanding of Database Concepts, Agile & Scrum</p>
-        <p><strong>Technologies:</strong> SQL, Data Modeling, Data Analysis, Microsoft Power BI, Microsoft Visio, Microsoft Excel, Jira, Confluence</p>
-      </section>
+        <main>
+            <section id="skills">
+                <h2>Skills</h2>
+                <p><strong>Proficiencies:</strong> Business Analysis & Requirements Elicitation, Stakeholder Communication & Collaboration, Data Modeling (Relational) & SQL Querying/Optimization, Data Analysis & Interpretation, Data Visualization Principles, Problem-Solving & Critical Thinking, Understanding of Database Concepts, Agile & Scrum</p>
+                <p><strong>Technologies:</strong> SQL, Data Modeling, Data Analysis, Microsoft Power BI, Microsoft Visio, Microsoft Excel, Jira, Confluence</p>
+            </section>
 
-      <section id="education">
-        <h2>Education</h2>
-        <div>
-          <h3>Sault College of Applied Arts and Technology – Brampton, ON</h3>
-          <p><strong>POSTGRADUATE DIPLOMA IN GLOBAL BUSINESS MANAGEMENT</strong><br>GPA: 3.7 / 4.0<br>Sept 2023 – April 2025</p>
-          <p><strong>Courses:</strong> Managerial Accounting, International Business Law, Project Leadership, International Trade Finance, Global Value Chain, Strategic Business Management</p>
-        </div>
-        <div>
-          <h3>Kurukshetra University – Kurukshetra, HR, India</h3>
-          <p><strong>BACHELOR OF COMMERCE</strong><br>GPA: 3.5 / 4.0<br>Aug 2019 – April 2022</p>
-          <p><strong>Courses:</strong> Financial Accounting, Business Economics, Business Mathematics, Principles of Marketing, Business Statistics, Corporate Accounting, Human Resource Management, International Marketing, Financial Market Operations, Management Accounting and Financial Management, Cost Accounting, Advertising and Sales Management</p>
-        </div>
-      </section>
+            <section id="education">
+                <h2>Education</h2>
+                <div>
+                    <h3>Sault College of Applied Arts and Technology – Brampton, ON</h3>
+                    <p><strong>POSTGRADUATE DIPLOMA IN GLOBAL BUSINESS MANAGEMENT</strong><br>GPA: 3.7 / 4.0<br>Sept 2023 – April 2025</p>
+                    <p><strong>Courses:</strong> Managerial Accounting, International Business Law, Project Leadership, International Trade Finance, Global Value Chain, Strategic Business Management</p>
+                </div>
+                <div>
+                    <h3>Kurukshetra University – Kurukshetra, HR, India</h3>
+                    <p><strong>BACHELOR OF COMMERCE</strong><br>GPA: 3.5 / 4.0<br>Aug 2019 – April 2022</p>
+                    <p><strong>Courses:</strong> Financial Accounting, Business Economics, Business Mathematics, Principles of Marketing, Business Statistics, Corporate Accounting, Human Resource Management, International Marketing, Financial Market Operations, Management Accounting and Financial Management, Cost Accounting, Advertising and Sales Management</p>
+                </div>
+            </section>
 
-      <section id="projects">
-        <h2>Projects</h2>
-        <div>
-          <h3>Retail Sales Analytics System (SQL)</h3>
-          <p>Designed and implemented a SQL-based analytics system for a fictional e-commerce platform. Built a normalized data model including customers, products, orders, and inventory. Wrote optimized queries to analyze customer behavior, product performance, and monthly revenue trends. Utilized window functions for advanced insights and applied indexing for performance tuning.</p>
-          <p>GitHub Repo: <a href="https://github.com/loveleen1saini/retail-analytics-system" target="_blank">retail-analytics-system</a></p>
-        </div>
-        <div>
-          <h3>Power BI Sales Insights Dashboard</h3>
-          <p>Created an interactive dashboard in Power BI to analyze sales trends across time, product categories, and regions. Used DAX calculations, slicers, and custom visuals to uncover actionable insights and improve data storytelling. Published to Power BI cloud and embedded a public link for sharing with recruiters and hiring managers.</p>
-        </div>
-        <div>
-          <h3>Inventory Optimization & Automation Project (Excel, Visio)</h3>
-          <p>Analyzed inventory workflows to identify inefficiencies using Excel (Pivot Tables, Charts, VLOOKUP, Conditional Formatting). Mapped As-Is and To-Be processes using Visio for business process visualization. Proposed automation strategies expected to reduce stockouts by 25% and enhance reporting frequency. Improved stakeholder understanding through clear data presentation and process documentation.</p>
-        </div>
-      </section>
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="entry">
+                    <h3>Retail Sales Analytics System (SQL)</h3>
+                    <p>Designed and implemented a SQL-based analytics system for a fictional e-commerce platform. Built a normalized data model including customers, products, orders, and inventory. Wrote optimized queries to analyze customer behavior, product performance, and monthly revenue trends. Utilized window functions for advanced insights and applied indexing for performance tuning.</p>
+                    <p>GitHub Repo: <a href="https://github.com/loveleen1saini/retail-analytics-system" target="_blank" rel="noopener noreferrer">retail-analytics-system</a></p>
+                </div>
+                <div class="entry">
+                    <h3>Power BI Sales Insights Dashboard</h3>
+                    <p>Created an interactive dashboard in Power BI to analyze sales trends across time, product categories, and regions. Used DAX calculations, slicers, and custom visuals to uncover actionable insights and improve data storytelling. Published to Power BI cloud and embedded a public link for sharing with recruiters and hiring managers.</p>
+                </div>
+                <div class="entry">
+                    <h3>Inventory Optimization & Automation Project (Excel, Visio)</h3>
+                    <p>Analyzed inventory workflows to identify inefficiencies using Excel (Pivot Tables, Charts, VLOOKUP, Conditional Formatting). Mapped As-Is and To-Be processes using Visio for business process visualization. Proposed automation strategies expected to reduce stockouts by 25% and enhance reporting frequency. Improved stakeholder understanding through clear data presentation and process documentation.</p>
+                </div>
+            </section>
 
-      <section id="certifications">
-        <h2>Certifications</h2>
-        <div>
-          <h3>Microsoft Business Analyst Specialization</h3>
-          <p>GPA: 3.7 / 4.0<br>Jan 2025 – April 2025</p>
-          <p>Microsoft-certified Business Analyst, demonstrating proficiency in data-driven analysis (Excel, Power BI), process visualization (Visio), effective requirements gathering, and end-to-end project delivery methodologies.</p>
-        </div>
-      </section>
+            <section id="certifications">
+                <h2>Certifications</h2>
+                <div class="entry">
+                    <h3>Microsoft Business Analyst Specialization</h3>
+                    <p>GPA: 3.7 / 4.0<br>Jan 2025 – April 2025</p>
+                    <p>Microsoft-certified Business Analyst, demonstrating proficiency in data-driven analysis (Excel, Power BI), process visualization (Visio), effective requirements gathering, and end-to-end project delivery methodologies.</p>
+                </div>
+            </section>
 
-      <section id="contact">
-        <h2>Contact</h2>
-        <form>
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <textarea name="message" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-      </section>
-    </main>
-  </div>
+            <section id="contact">
+                <h2>Contact</h2>
+                <form>
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+        </main>
+    </div>
 
-  <script>
-    const name = "Loveleen Saini";
-    let i = 0;
-    function typeWriter() {
-      if (i <= name.length) {
-        document.getElementById("typing").textContent = name.substring(0, i);
-        i++;
-        setTimeout(typeWriter, 150);
-      }
-    }
-    window.onload = typeWriter;
-  </script>
+    <script>
+        const name = "Loveleen";
+        let i = 0;
+        function typeWriter() {
+            if (i <= name.length) {
+                document.getElementById("typing").textContent = name.substring(0, i);
+                i++;
+                setTimeout(typeWriter, 150);
+            }
+        }
+        window.onload = typeWriter;
+    </script>
 </body>
 </html>
