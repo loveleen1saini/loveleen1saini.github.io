@@ -1,109 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Loveleen – Resume</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script>
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark');
-        }
 
-        const name = "Loveleen";
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loveleen Saini - Personal Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="personal">
+                Personal Portfolio
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Summary</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <svg class="header-decoration" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <path fill="#E0E7FF" d="M77.6,-28.3C81.2,-13.1,61.5,3.6,45.1,17.2C28.7,30.8,15.6,41.3,-1.1,42.6C-17.8,43.9,-38.2,36.1,-51.1,20.6C-64,-5,-69.4,-38.2,-58.8,-53.8C-48.3,-69.4,-22.8,-67.4,-1.1,-66.1C20.6,-64.8,41.2,-64.2,54.5,-55.1C67.8,-46,74,-28.1,77.6,-28.3Z" transform="translate(10 50) scale(0.8)" />
+            </svg>
+            <button onclick="toggleDarkMode()" id="darkModeToggle" aria-label="Toggle Dark Mode">🌙</button>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hey! I Am <br><span id="typing"></span></h1>
+                <p class="resume-summary">A highly motivated and results-oriented professional with a strong background in Business Analysis, Data Analysis, and Project Management. Seeking a challenging role where I can utilize my skills to contribute to the success of a dynamic organization.</p>
+                <div class="contact-info">
+                    <a href="mailto:sainiloveleen328@gmail.com" class="contact-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"/></svg>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/loveleen-saini-02038623a" target="_blank" rel="noopener noreferrer" class="contact-link">
+                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                       <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/loveleen1saini" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="background.jpg" alt="Abstract data analysis background theme">
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="education-container">
+                <div class="education-card">
+                    <span class="education-institution">Sault College of Applied Arts and Technology</span>
+                    <p class="education-location">Brampton, ON</p>
+                    <p class="degree">Postgraduate Diploma in Global Business Management</p>
+                    <div class="details">
+                        <p><strong>Dates:</strong> Sept 2023 – April 2025</p>
+                        <p><strong>GPA:</strong> 3.7 / 4.0</p>
+                        <p><strong>Relevant Courses:</strong> Managerial Accounting, International Business Law, Project Leadership, International Trade Finance, Global Value Chain, Strategic Business Management.</p>
+                    </div>
+                </div>
+                <div class="education-card">
+                     <span class="education-institution">Kurukshetra University</span>
+                     <p class="education-location">Kurukshetra, HR, India</p>
+                     <p class="degree">Bachelor of Commerce</p>
+                     <div class="details">
+                        <p><strong>Dates:</strong> Aug 2019 – April 2022</p>
+                        <p><strong>GPA:</strong> 3.5 / 4.0</p>
+                        <p><strong>Relevant Courses:</strong> Financial Accounting, Business Economics, Business Mathematics, Principles of Marketing, Business Statistics, Corporate Accounting, Human Resource Management, International Marketing, Financial Market Operations, Management Accounting and Financial Management, Cost Accounting, Advertising and Sales Management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <span class="project-name">Retail Sales Analytics (SQL)</span>
+                    <p>Designed a SQL-based analytics system with optimized queries and advanced insights using window functions and indexes.</p>
+                    <div class="details">
+                        <p><strong>Tools Used:</strong> MS SQL Server, T-SQL, Database Design Principles</p>
+                        <p><strong>Key Features:</strong> Complex Joins, Window Functions, Indexing for Performance.</p>
+                        <p><a href="https://github.com/loveleen1saini/retail-analytics-system" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <span class="project-name">Power BI Sales Dashboard</span>
+                     <p>Created an interactive Power BI dashboard with slicers, DAX, and insights visualization for better data storytelling.</p>
+                    <div class="details">
+                         <p><strong>Tools Used:</strong> Microsoft Power BI, DAX, Data Modeling, Power Query</p>
+                         <p><strong>Key Features:</strong> Interactive Slicers, KPI Cards, Trend Analysis Visualizations.</p>
+                    </div>
+                </div>
+                 <div class="project-card">
+                    <span class="project-name">Inventory Optimization (Excel, Visio)</span>
+                     <p>Analyzed inventory workflows, automated reporting, and proposed strategies to reduce stockouts by 25%.</p>
+                    <div class="details">
+                         <p><strong>Tools Used:</strong> Microsoft Excel (Advanced), Pivot Tables, VBA (Macros), Microsoft Visio</p>
+                         <p><strong>Key Features:</strong> Process Flow Mapping, Automated Reporting Template, Stockout Reduction Analysis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <div class="container">
+            <h2>Certifications</h2>
+             <div class="certifications-container">
+                 <div class="certification-card">
+                    <span class="certification-name">Microsoft Business Analyst Specialization</span>
+                     <div class="details">
+                        <p><strong>Completion Dates:</strong> Jan 2025 – April 2025</p>
+                        <p><strong>Skills Covered:</strong> Proficiency in Excel, Power BI, Visio, and project delivery methodologies.</p>
+                     </div>
+                 </div>
+                 </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <form id="contactForm">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit" id="submitButton">Send Message</button>
+
+                <div id="formMessage" class="form-message"></div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="currentYear">2025</span> Loveleen Saini. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Dark Mode & Theme Persistence ---
+        const body = document.body;
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        function setDarkMode(isDark) {
+            if (isDark) { body.classList.add('dark'); if (darkModeToggle) darkModeToggle.textContent = '☀️'; localStorage.setItem('theme', 'dark'); }
+            else { body.classList.remove('dark'); if (darkModeToggle) darkModeToggle.textContent = '🌙'; localStorage.setItem('theme', 'light'); }
+        }
+        function toggleDarkMode() { setDarkMode(!body.classList.contains('dark')); }
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) { setDarkMode(true); } else { setDarkMode(false); }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => { if (!localStorage.getItem('theme')) { setDarkMode(e.matches); } });
+
+        // --- Typing Effect ---
+        const nameToType = "Loveleen Saini";
+        const typingElement = document.getElementById("typing");
         let i = 0;
         function typeWriter() {
-            if (i <= name.length) {
-                document.getElementById("typing").textContent = name.substring(0, i);
-                i++;
-                setTimeout(typeWriter, 150);
-            }
+            if (typingElement && i < nameToType.length) { typingElement.textContent = nameToType.substring(0, i + 1); i++; setTimeout(typeWriter, 110); }
         }
-        window.onload = typeWriter;
+        if (typingElement) { typingElement.textContent = ''; typeWriter(); }
+
+        // --- Interactive Card Logic ---
+        function makeCardsInteractive(selector) {
+            const cards = document.querySelectorAll(selector);
+            cards.forEach(card => {
+                card.addEventListener('click', (e) => {
+                    if (e.target.closest('a')) return;
+                    const container = card.closest('div[class*="-container"]');
+                    if (container) {
+                        container.querySelectorAll(selector + '.active').forEach(activeCard => { if (activeCard !== card) activeCard.classList.remove('active'); });
+                    }
+                    card.classList.toggle('active');
+                });
+            });
+        }
+
+        // --- Skills Visualization ---
+        const skillsData = [ /* ... Skill data ... */
+             { name: "Business Analysis & Requirements Elicitation", details: "Proficient in gathering, analyzing, and documenting business needs and functional requirements. Skilled in using various elicitation techniques and tools." }, { name: "Stakeholder Communication & Collaboration", details: "Excellent communication and interpersonal skills. Ability to effectively interact with diverse stakeholders and build strong working relationships." }, { name: "Data Modeling (Relational) & SQL Querying/Optimization", details: "Experience in designing relational databases, writing complex SQL queries, and optimizing database performance for efficient data retrieval." }, { name: "Data Analysis & Interpretation", details: "Strong analytical skills to process, analyze, and interpret complex datasets to identify trends, patterns, and actionable insights." }, { name: "Data Visualization Principles", details: "Knowledge of data visualization best practices to create clear, concise, and impactful visualizations for effective communication of data." }, { name: "Problem-Solving & Critical Thinking", details: "Proven ability to identify, analyze, and solve complex problems using critical thinking and logical reasoning." }, { name: "Understanding of Database Concepts", details: "Solid understanding of database management systems, including data structures, normalization, transactions, and concurrency control." }, { name: "Agile & Scrum", details: "Experience working in Agile and Scrum environments, participating in sprints, stand-ups, and other Agile ceremonies." }, { name: "SQL", details: "Advanced proficiency in SQL, including writing complex queries, stored procedures, triggers, and functions." }, { name: "Data Modeling Tools", details: "Expertise in conceptual, logical, and physical data modeling using tools like ERwin, Visio, or Lucidchart." }, { name: "Data Analysis Tools", details: "Proficient in using data analysis tools and techniques, including statistical analysis, data mining, and potentially Python/R." }, { name: "Microsoft Power BI", details: "Experience in designing and developing interactive dashboards and reports using Microsoft Power BI for data visualization and business intelligence." }, { name: "Microsoft Visio", details: "Skilled in creating process flow diagrams, UML diagrams, and other visual representations of business processes using Microsoft Visio." }, { name: "Microsoft Excel (Advanced)", details: "Advanced Excel skills, including pivot tables, VLOOKUP, macros, and data analysis functions." }, { name: "Jira", details: "Experience in using Jira for project management, issue tracking, and workflow automation." }, { name: "Confluence", details: "Experience in using Confluence for collaboration, knowledge management, and documentation." }
+         ];
+        const skillsContainer = document.querySelector('.skills-container');
+        function renderSkills() {
+            if (!skillsContainer) return;
+            skillsContainer.innerHTML = '';
+            skillsData.forEach(skill => {
+                const skillDiv = document.createElement('div'); skillDiv.classList.add('skill-card');
+                const nameSpan = document.createElement('span'); nameSpan.classList.add('skill-name'); nameSpan.textContent = skill.name;
+                const detailsDiv = document.createElement('div'); detailsDiv.classList.add('details'); detailsDiv.textContent = skill.details;
+                skillDiv.appendChild(nameSpan); skillDiv.appendChild(detailsDiv); skillsContainer.appendChild(skillDiv);
+            });
+            makeCardsInteractive('.skill-card');
+        }
+        renderSkills();
+
+        // --- Activate Interaction for other Card Sections ---
+        makeCardsInteractive('.project-card');
+        makeCardsInteractive('.education-card');
+        makeCardsInteractive('.certification-card');
+
+        // --- Contact Form Submission with Endpoint ---
+        const contactForm = document.getElementById('contactForm');
+        const formMessage = document.getElementById('formMessage');
+        const submitButton = document.getElementById('submitButton');
+
+        if (contactForm && formMessage && submitButton) {
+            contactForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                formMessage.textContent = '';
+                formMessage.className = 'form-message';
+
+                const nameInput = document.getElementById('name');
+                const emailInput = document.getElementById('email');
+                const messageInput = document.getElementById('message');
+                let isValid = true;
+
+                if (!nameInput.value.trim() || !emailInput.value.trim() || !isValidEmail(emailInput.value.trim()) || !messageInput.value.trim()) {
+                    isValid = false;
+                    formMessage.textContent = 'Please fill out all fields correctly.';
+                    formMessage.classList.add('error');
+                    if (!nameInput.value.trim()) nameInput.focus();
+                    else if (!emailInput.value.trim() || !isValidEmail(emailInput.value.trim())) emailInput.focus();
+                    else if (!messageInput.value.trim()) messageInput.focus();
+                }
+                if (!isValid) return;
+
+                submitButton.disabled = true;
+                submitButton.classList.add('sending');
+                submitButton.innerHTML = 'Sending<span class="dot-elastic"></span>';
+
+                const formData = new FormData(contactForm);
+
+                // !!! USING YOUR SPECIFIC FORM SPREE ENDPOINT URL !!!
+                fetch('https://formspree.io/f/mvgkloqr', {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        submitButton.classList.remove('sending');
+                        submitButton.classList.add('sent');
+                        submitButton.innerHTML = 'Sent ✔';
+                        contactForm.reset();
+                        setTimeout(() => {
+                            if (submitButton.classList.contains('sent')) {
+                                submitButton.disabled = false;
+                                submitButton.classList.remove('sent');
+                                submitButton.textContent = 'Send Message';
+                            }
+                        }, 3000);
+                    } else {
+                        response.json().then(data => {
+                            throw new Error(data.errors ? data.errors.map(e => e.message).join(', ') : 'Form submission failed.');
+                        }).catch(() => { throw new Error('Form submission failed.'); });
+                    }
+                })
+                .catch(error => {
+                    console.error("Form submission error:", error);
+                    submitButton.classList.remove('sending');
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Send Message';
+                    formMessage.textContent = error.message || 'Oops! There was a problem.';
+                    formMessage.classList.add('error');
+                });
+            });
+        }
+
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // --- Scroll-to-Top Button ---
+        const scrollToTopButton = document.createElement('button');
+        scrollToTopButton.type = 'button';
+        scrollToTopButton.innerHTML = '&#x2B06;️';
+        scrollToTopButton.title = 'Back to Top';
+        scrollToTopButton.classList.add('scroll-to-top');
+        document.body.appendChild(scrollToTopButton);
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', () => {
+            let st = window.pageYOffset || document.documentElement.scrollTop;
+            if (st > 300) { scrollToTopButton.style.opacity = '0.8'; scrollToTopButton.style.visibility = 'visible'; scrollToTopButton.style.transform = 'translateY(0)'; }
+            else { scrollToTopButton.style.opacity = '0'; scrollToTopButton.style.visibility = 'hidden'; scrollToTopButton.style.transform = 'translateY(20px)'; }
+            lastScrollTop = st <= 0 ? 0 : st;
+        }, false);
+        scrollToTopButton.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+        // --- Dynamic Year in Footer ---
+        const currentYearSpan = document.getElementById('currentYear');
+        if (currentYearSpan) { currentYearSpan.textContent = new Date().getFullYear(); }
+
     </script>
-</head>
-<body>
-    <div class="glass-container">
-        <header>
-            <h1 id="typing">Loveleen</h1>
-            <p class="contact">
-                📞 <a href="tel:+14377333345">+1 (437)-733-3345</a> |
-                📧 <a href="mailto:sainiloveleen328@gmail.com">sainiloveleen328@gmail.com</a> |
-                🔗 <a href="https://www.linkedin.com/in/loveleen-saini-02038623a" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-                🐙 <a href="https://github.com/loveleen1saini" target="_blank" rel="noopener noreferrer">GitHub</a>
-            </p>
-            <div class="nav-buttons">
-                <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
-                <a href="Loveleen_Resume.pdf" download><button>📄 Download Resume</button></a>
-                <a href="#contact"><button>💬 Contact Me</button></a>
-            </div>
-        </header>
 
-        <nav>
-            <a href="#skills">Skills</a>
-            <a href="#education">Education</a>
-            <a href="#projects">Projects</a>
-            <a href="#certifications">Certifications</a>
-        </nav>
-
-        <main>
-            <section id="skills">
-                <h2>Skills</h2>
-                <p><strong>Proficiencies:</strong> Business Analysis, Stakeholder Communication, SQL Querying, Data Analysis, Visualization, Agile/Scrum</p>
-                <p><strong>Technologies:</strong> SQL, Power BI, Visio, Excel, Jira, Confluence</p>
-            </section>
-
-            <section id="education">
-                <h2>Education</h2>
-                <div>
-                    <h3>Sault College – Brampton, ON</h3>
-                    <p><strong>Postgrad in Global Business Management</strong><br>GPA: 3.7 / 4.0<br>Sept 2023 – April 2025</p>
-                </div>
-                <div>
-                    <h3>Kurukshetra University – India</h3>
-                    <p><strong>Bachelor of Commerce</strong><br>GPA: 3.5 / 4.0<br>Aug 2019 – April 2022</p>
-                </div>
-            </section>
-
-            <section id="projects">
-                <h2>Projects</h2>
-                <div class="entry">
-                    <h3>Retail Sales Analytics (SQL)</h3>
-                    <p>Designed a SQL-based analytics system with optimized queries and advanced insights using window functions and indexes.</p>
-                    <p><a href="https://github.com/loveleen1saini/retail-analytics-system" target="_blank">GitHub: retail-analytics-system</a></p>
-                </div>
-                <div class="entry">
-                    <h3>Power BI Sales Dashboard</h3>
-                    <p>Created an interactive Power BI dashboard with slicers, DAX, and insights visualization for better data storytelling.</p>
-                </div>
-                <div class="entry">
-                    <h3>Inventory Optimization (Excel, Visio)</h3>
-                    <p>Analyzed inventory workflows, automated reporting, and proposed strategies to reduce stockouts by 25%.</p>
-                </div>
-            </section>
-
-            <section id="certifications">
-                <h2>Certifications</h2>
-                <div class="entry">
-                    <h3>Microsoft Business Analyst Specialization</h3>
-                    <p>Jan 2025 – April 2025<br>Proficiency in Excel, Power BI, Visio, and project delivery methodologies.</p>
-                </div>
-            </section>
-
-            <section id="contact">
-                <h2>Contact</h2>
-                <form>
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required>
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </section>
-        </main>
-    </div>
 </body>
 </html>
