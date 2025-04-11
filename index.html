@@ -6,34 +6,48 @@
   <title>Loveleen – Resume</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
 </head>
 <body>
   <div class="glass-container">
     <header>
       <h1>Loveleen</h1>
       <p class="contact">
-        📞 <a href="tel:+14377333345">+1 (437)-733-3345</a> | 
-        📧 <a href="mailto:sainiloveleen328@gmail.com">sainiloveleen328@gmail.com</a> | 
-        🔗 <a href="https://www.linkedin.com/in/loveleen-saini-02038623a" target="_blank">LinkedIn</a> | 
+        📞 <a href="tel:+14377333345">+1 (437)-733-3345</a> |
+        📧 <a href="mailto:sainiloveleen328@gmail.com">sainiloveleen328@gmail.com</a> |
+        🔗 <a href="https://www.linkedin.com/in/loveleen-saini-02038623a" target="_blank">LinkedIn</a> |
         🐙 <a href="https://github.com/loveleen1saini" target="_blank">GitHub</a>
       </p>
+      <div class="nav-buttons">
+        <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+        <a href="Loveleen_Resume.pdf" download><button>📄 Download Resume</button></a>
+        <a href="#contact"><button>💬 Contact Me</button></a>
+      </div>
     </header>
 
+    <nav>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+    </nav>
+
     <main>
-      <section>
+      <section id="skills">
         <h2>💼 Skills</h2>
         <p><strong>Proficiencies:</strong> Business Analysis, Requirements Elicitation, Stakeholder Collaboration, SQL, Data Visualization, Critical Thinking, Agile & Scrum</p>
         <p><strong>Technologies:</strong> SQL, Power BI, Microsoft Excel, Microsoft Visio, Jira, Confluence</p>
       </section>
 
-      <section>
+      <section id="education">
         <h2>🎓 Education</h2>
         <div class="entry">
           <h3>Sault College, Brampton ON</h3>
           <p><em>Postgraduate Diploma in Global Business Management</em> (GPA: 3.7 / 4.0)<br/>Sept 2023 – Apr 2025</p>
-          <ul>
-            <li>Courses: Managerial Accounting, Business Law, Project Leadership, Trade Finance, Strategic Management</li>
-          </ul>
         </div>
         <div class="entry">
           <h3>Kurukshetra University, India</h3>
@@ -41,46 +55,53 @@
         </div>
       </section>
 
-      <section>
+      <section id="projects">
         <h2>🧠 Projects</h2>
-
         <div class="entry">
           <h3>Retail Sales Analytics System</h3>
           <ul>
-            <li>Designed a SQL-based analytics system for a fictional e-commerce platform</li>
-            <li>Built normalized data model, optimized queries, used window functions</li>
-            <li><a href="https://github.com/loveleen1saini/retail-analytics-system" target="_blank">View on GitHub</a></li>
+            <li>SQL-based analytics system with normalized data model</li>
+            <li>Optimized queries and advanced SQL window functions</li>
+            <li><a href="https://github.com/loveleen1saini/retail-analytics-system" target="_blank">GitHub Repo</a></li>
           </ul>
         </div>
 
         <div class="entry">
           <h3>Power BI Sales Insights Dashboard</h3>
           <ul>
-            <li>Created an interactive dashboard to analyze sales trends across dimensions</li>
-            <li>Used DAX, slicers, custom visuals to derive insights and improve storytelling</li>
-            <li>Published to Power BI cloud for recruiters and stakeholders</li>
+            <li>Interactive sales dashboard with custom visuals & DAX</li>
+            <li>Published to Power BI cloud for stakeholders</li>
           </ul>
         </div>
 
         <div class="entry">
           <h3>Inventory Optimization & Automation Project</h3>
           <ul>
-            <li>Analyzed inventory workflows with Excel tools (Pivot, Charts, VLOOKUP)</li>
-            <li>Mapped As-Is/To-Be processes with Visio and proposed automation</li>
-            <li>Expected to reduce stockouts by 25% and improve reporting</li>
+            <li>Excel & Visio analysis of inventory workflows</li>
+            <li>Proposed 25% reduction in stockouts via automation</li>
           </ul>
         </div>
       </section>
 
-      <section>
+      <section id="certifications">
         <h2>📜 Certifications</h2>
         <div class="entry">
           <h3>Microsoft Business Analyst Specialization</h3>
           <p>Jan 2025 – Apr 2025 | GPA: 3.7 / 4.0</p>
           <ul>
-            <li>Certified in Power BI, Excel, Visio, and project delivery lifecycle</li>
+            <li>Certified in Excel, Power BI, Visio, project lifecycle</li>
           </ul>
         </div>
+      </section>
+
+      <section id="contact">
+        <h2>📬 Contact Me</h2>
+        <form name="contact" method="POST" data-netlify="true">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
       </section>
     </main>
   </div>
