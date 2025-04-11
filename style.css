@@ -147,3 +147,35 @@ form button:hover {
 .dark h3 {
   color: #f3f4f6;
 }
+
+#projects .entry h3 {
+  font-size: 1.5rem;
+  color: #4b6cb7;
+  transition: color 0.3s ease;
+}
+
+#projects .entry h3:hover {
+  color: #182848;
+  cursor: pointer;
+}
+
+#projects .entry ul {
+  padding-left: 1.5rem;
+  line-height: 1.6;
+}
+
+#projects .entry ul li {
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+#projects .entry ul li a {
+  text-decoration: none;
+  color: #4b6cb7;
+  transition: color 0.3s ease;
+}
+
+#projects .entry ul li a:hover {
+  color: #182848;
+}
