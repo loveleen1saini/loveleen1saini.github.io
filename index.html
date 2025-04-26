@@ -18,9 +18,10 @@
       <nav>
         <ul>
           <li><a href="#hero">Summary</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#skills">Skills</a></li>
+          <li><a href="#work-experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
           <li><a href="#certifications">Certifications</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -64,38 +65,26 @@
     </div>
   </section>
 
-  <section id="education">
+  <section id="work-experience">
     <div class="container">
-      <h2>Education</h2>
-      <div class="education-container">
-        <div class="education-card">
-          <span class="education-institution">Sault College of Applied Arts and Technology</span>
-          <p class="education-location">Brampton, ON</p>
-          <p class="degree">Postgraduate Diploma in Global Business Management</p>
+      <h2>Work Experience</h2>
+      <div class="experience-container">
+        <div class="experience-card">
+          <span class="job-title">Business Analyst</span>
+          <p class="company-details">Angel One · Permanent Full-time</p>
+          <p class="location">Mumbai, Maharashtra, India · Hybrid</p>
+          <p class="dates">May 2022 - Jul 2023 · (1 yr 3 mos)</p>
           <div class="details">
-            <p><strong>Dates:</strong> Sept 2023 – April 2025</p>
-            <p><strong>GPA:</strong> 3.7 / 4.0</p>
-            <p><strong>Relevant Courses:</strong> Managerial Accounting, International Business Law, Project Leadership, International Trade Finance, Global Value Chain, Strategic Business Management.</p>
+            <ul class="responsibilities">
+              <li>Developed and maintained Power BI dashboards tracking client onboarding funnel metrics, improving visibility and reducing average activation time by 12%.</li>
+              <li>Designed Visio process maps for account opening workflows, identifying process gaps that cut onboarding errors by 8%.</li>
+              <li>Extracted client behaviour and transaction data using SQL to generate monthly executive reports on platform usage trends.</li>
+              <li>Built Excel-based financial models to forecast quarterly client acquisition growth, helping the marketing team plan targeted campaigns.</li>
+              <li>Collaborated with Product Managers to document feature requirements, prioritize enhancements, and support UAT for new trading app releases.</li>
+              <li>Supported compliance reporting by automating internal audit data pulls, reducing manual reporting time by 20%.</li>
+            </ul>
           </div>
         </div>
-        <div class="education-card">
-          <span class="education-institution">Kurukshetra University</span>
-          <p class="education-location">Kurukshetra, HR, India</p>
-          <p class="degree">Bachelor of Commerce</p>
-          <div class="details">
-            <p><strong>Dates:</strong> Aug 2019 – April 2022</p>
-            <p><strong>GPA:</strong> 3.5 / 4.0</p>
-            <p><strong>Relevant Courses:</strong> Financial Accounting, Business Economics, Business Mathematics, Principles of Marketing, Business Statistics, Corporate Accounting, Human Resource Management, International Marketing, Financial Market Operations, Management Accounting and Financial Management, Cost Accounting, Advertising and Sales Management.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <div class="container">
-      <h2>Skills</h2>
-      <div class="skills-container">
       </div>
     </div>
   </section>
@@ -129,6 +118,42 @@
             <p><strong>Tools Used:</strong> Microsoft Excel (Advanced), Pivot Tables, VBA (Macros), Microsoft Visio</p>
             <p><strong>Key Features:</strong> Process Flow Mapping, Automated Reporting Template, Stockout Reduction Analysis.</p>
             <p><a href="https://github.com/loveleen1saini/inventory-optimization-visio-excel" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-container">
+        </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="container">
+      <h2>Education</h2>
+      <div class="education-container">
+        <div class="education-card">
+          <span class="education-institution">Sault College of Applied Arts and Technology</span>
+          <p class="education-location">Brampton, ON</p>
+          <p class="degree">Postgraduate Diploma in Global Business Management</p>
+          <div class="details">
+            <p><strong>Dates:</strong> Sept 2023 – April 2025</p>
+            <p><strong>GPA:</strong> 3.7 / 4.0</p>
+            <p><strong>Relevant Courses:</strong> Managerial Accounting, International Business Law, Project Leadership, International Trade Finance, Global Value Chain, Strategic Business Management.</p>
+          </div>
+        </div>
+        <div class="education-card">
+          <span class="education-institution">Kurukshetra University</span>
+          <p class="education-location">Kurukshetra, HR, India</p>
+          <p class="degree">Bachelor of Commerce</p>
+          <div class="details">
+            <p><strong>Dates:</strong> Aug 2019 – April 2022</p>
+            <p><strong>GPA:</strong> 3.5 / 4.0</p>
+            <p><strong>Relevant Courses:</strong> Financial Accounting, Business Economics, Business Mathematics, Principles of Marketing, Business Statistics, Corporate Accounting, Human Resource Management, International Marketing, Financial Market Operations, Management Accounting and Financial Management, Cost Accounting, Advertising and Sales Management.</p>
           </div>
         </div>
       </div>
@@ -173,8 +198,7 @@
 
   <footer>
     <div class="container">
-      <p>&copy; <span id="currentYear">2025</span> Loveleen. All rights reserved.</p>
-    </div>
+      <p>&copy; <span id="currentYear">2025</span> Loveleen. All rights reserved.</p> </div>
   </footer>
 
   <script>
@@ -199,16 +223,19 @@
     }
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    // Set initial theme based on saved preference or system setting
     if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
       setDarkMode(true);
     } else {
       setDarkMode(false);
     }
+    // Listen for changes in system preference if no theme is saved
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
       if (!localStorage.getItem('theme')) {
         setDarkMode(e.matches);
       }
     });
+
     // --- Typing Effect ---
     const nameToType = "Loveleen";
     const typingElement = document.getElementById("typing");
@@ -221,28 +248,52 @@
         setTimeout(typeWriter, 110);
       }
     }
+    // Initialize typing effect if the element exists
     if (typingElement) {
-      typingElement.textContent = '';
+      typingElement.textContent = ''; // Clear initially
       typeWriter();
     }
+
     // --- Interactive Card Logic ---
     function makeCardsInteractive(selector) {
+      // console.log(`Initializing interactive cards for selector: ${selector}`); // Debug log
       const cards = document.querySelectorAll(selector);
       cards.forEach(card => {
         card.addEventListener('click', (e) => {
-          if (e.target.closest('a')) return;
+          // Prevent expansion if clicking on a link within the card's details
+          if (e.target.closest('.details a')) {
+                // console.log('Link inside details clicked, preventing card toggle.'); // Debug log
+                return;
+            }
+            // Also prevent if clicking a link directly within the card but outside details (if any)
+            if (e.target.tagName === 'A' && !e.target.closest('.details')) {
+                 // console.log('Direct link clicked, preventing card toggle.'); // Debug log
+                 return;
+            }
+
+          // console.log('Card clicked:', card); // Debug log
           const container = card.closest('div[class*="-container"]');
+          // Collapse other active cards within the SAME container
           if (container) {
-            container.querySelectorAll(selector + '.active').forEach(activeCard => {
-              if (activeCard !== card) activeCard.classList.remove('active');
+            const activeCardsInContainer = container.querySelectorAll(`${selector}.active`);
+            activeCardsInContainer.forEach(activeCard => {
+              if (activeCard !== card) {
+                 // console.log('Collapsing other active card:', activeCard); // Debug log
+                 activeCard.classList.remove('active');
+              }
             });
+          } else {
+            // console.log('Card container not found for selector:', selector); // Debug log
           }
+          // Toggle the current card's active state
           card.classList.toggle('active');
+          // console.log('Toggled active class. Card active state:', card.classList.contains('active')); // Debug log
         });
       });
     }
+
     // --- Skills Visualization ---
-    const skillsData = [ /* ... Skill data ... */ {
+    const skillsData = [ {
       name: "Business Analysis & Requirements Elicitation",
       details: "Proficient in gathering, analyzing, and documenting business needs and functional requirements. Skilled in using various elicitation techniques and tools."
     }, {
@@ -295,7 +346,7 @@
 
     function renderSkills() {
       if (!skillsContainer) return;
-      skillsContainer.innerHTML = '';
+      skillsContainer.innerHTML = ''; // Clear existing skills if any
       skillsData.forEach(skill => {
         const skillDiv = document.createElement('div');
         skillDiv.classList.add('skill-card');
@@ -309,26 +360,34 @@
         skillDiv.appendChild(detailsDiv);
         skillsContainer.appendChild(skillDiv);
       });
+      // Make the newly added skill cards interactive AFTER rendering
       makeCardsInteractive('.skill-card');
     }
+    // Ensure renderSkills is called to populate and initialize skills section
     renderSkills();
-    // --- Activate Interaction for other Card Sections ---
+
+    // --- Activate Interaction for ALL Card Sections ---
     makeCardsInteractive('.project-card');
     makeCardsInteractive('.education-card');
     makeCardsInteractive('.certification-card');
+    makeCardsInteractive('.experience-card'); // Ensure this is called
+
     // --- Contact Form Submission with Endpoint ---
     const contactForm = document.getElementById('contactForm');
     const formMessage = document.getElementById('formMessage');
     const submitButton = document.getElementById('submitButton');
+
     if (contactForm && formMessage && submitButton) {
       contactForm.addEventListener('submit', function(event) {
         event.preventDefault();
         formMessage.textContent = '';
-        formMessage.className = 'form-message';
+        formMessage.className = 'form-message'; // Reset class
+
         const nameInput = document.getElementById('name');
         const emailInput = document.getElementById('email');
         const messageInput = document.getElementById('message');
         let isValid = true;
+
         if (!nameInput.value.trim() || !emailInput.value.trim() || !isValidEmail(emailInput.value.trim()) || !messageInput.value.trim()) {
           isValid = false;
           formMessage.textContent = 'Please fill out all fields correctly.';
@@ -337,48 +396,50 @@
           else if (!emailInput.value.trim() || !isValidEmail(emailInput.value.trim())) emailInput.focus();
           else if (!messageInput.value.trim()) messageInput.focus();
         }
+
         if (!isValid) return;
+
         submitButton.disabled = true;
         submitButton.classList.add('sending');
         submitButton.innerHTML = 'Sending<span class="dot-elastic"></span>';
+
         const formData = new FormData(contactForm);
-        // !!! USING YOUR SPECIFIC FORM SPREE ENDPOINT URL !!!
-        fetch('https://formspree.io/f/mvgkloqr', {
-            method: 'POST',
-            body: formData,
-            headers: {
-              'Accept': 'application/json'
-            }
-          })
-          .then(response => {
-            if (response.ok) {
-              submitButton.classList.remove('sending');
-              submitButton.classList.add('sent');
-              submitButton.innerHTML = 'Sent ✔';
-              contactForm.reset();
-              setTimeout(() => {
-                if (submitButton.classList.contains('sent')) {
-                  submitButton.disabled = false;
-                  submitButton.classList.remove('sent');
-                  submitButton.textContent = 'Send Message';
-                }
-              }, 3000);
-            } else {
-              response.json().then(data => {
-                throw new Error(data.errors ? data.errors.map(e => e.message).join(', ') : 'Form submission failed.');
-              }).catch(() => {
-                throw new Error('Form submission failed.');
-              });
-            }
-          })
-          .catch(error => {
-            console.error("Form submission error:", error);
+        fetch('https://formspree.io/f/mvgkloqr', { // Replace with your Formspree endpoint
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        })
+        .then(response => {
+          if (response.ok) {
             submitButton.classList.remove('sending');
-            submitButton.disabled = false;
-            submitButton.textContent = 'Send Message';
-            formMessage.textContent = error.message || 'Oops! There was a problem.';
-            formMessage.classList.add('error');
-          });
+            submitButton.classList.add('sent');
+            submitButton.innerHTML = 'Sent ✔';
+            contactForm.reset();
+            setTimeout(() => {
+              if (submitButton.classList.contains('sent')) {
+                submitButton.disabled = false;
+                submitButton.classList.remove('sent');
+                submitButton.textContent = 'Send Message';
+              }
+            }, 3000);
+          } else {
+            response.json().then(data => {
+              const errorMessage = data.errors ? data.errors.map(e => e.message).join(', ') : 'Form submission failed.';
+              throw new Error(errorMessage);
+            }).catch((error) => {
+               console.error("Error parsing JSON response or generic failure:", error);
+              throw new Error('Form submission failed. Please try again.');
+            });
+          }
+        })
+        .catch(error => {
+          console.error("Form submission fetch error:", error);
+          submitButton.classList.remove('sending');
+          submitButton.disabled = false;
+          submitButton.textContent = 'Send Message';
+          formMessage.textContent = error.message || 'Oops! There was a problem submitting your form.';
+          formMessage.classList.add('error');
+        });
       });
     }
 
@@ -386,6 +447,7 @@
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailRegex.test(email);
     }
+
     // --- Scroll-to-Top Button ---
     const scrollToTopButton = document.createElement('button');
     scrollToTopButton.type = 'button';
@@ -393,6 +455,7 @@
     scrollToTopButton.title = 'Back to Top';
     scrollToTopButton.classList.add('scroll-to-top');
     document.body.appendChild(scrollToTopButton);
+
     let lastScrollTop = 0;
     window.addEventListener('scroll', () => {
       let st = window.pageYOffset || document.documentElement.scrollTop;
@@ -407,19 +470,16 @@
       }
       lastScrollTop = st <= 0 ? 0 : st;
     }, false);
+
     scrollToTopButton.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
     // --- Dynamic Year in Footer ---
     const currentYearSpan = document.getElementById('currentYear');
     if (currentYearSpan) {
       currentYearSpan.textContent = new Date().getFullYear();
     }
   </script>
-
 </body>
-
 </html>
