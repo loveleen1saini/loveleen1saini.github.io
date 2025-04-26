@@ -1,6 +1,3 @@
-/* style.css */
-
-/* Reset and General Styles */
 * {
   margin: 0;
   padding: 0;
@@ -77,6 +74,7 @@ body.dark section h2::after {
 body.dark .education-card,
 body.dark .project-card,
 body.dark .certification-card,
+body.dark .experience-card, /* Added experience card */
 body.dark .skill-card {
   background-color: #2c2c2c;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -84,46 +82,73 @@ body.dark .skill-card {
 body.dark .education-card:hover,
 body.dark .project-card:hover,
 body.dark .certification-card:hover,
+body.dark .experience-card:hover, /* Added experience card hover */
 body.dark .skill-card:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
-body.dark .education-card .education-institution, /* Titles */
+
+/* Dark mode card titles */
+body.dark .education-institution,
 body.dark .project-card .project-name,
 body.dark .certification-card .certification-name,
+body.dark .experience-card .job-title, /* Added experience title */
 body.dark .skill-card .skill-name {
   color: #4dabf7;
 } /* Accent color for titles */
-body.dark .education-card p, /* General text */
-body.dark .project-card p,
-body.dark .certification-card p,
-body.dark .skill-card p {
+
+/* Dark mode general card text (outside details) */
+body.dark .education-card > p, /* Target direct children p tags */
+body.dark .project-card > p,
+body.dark .certification-card > p,
+body.dark .experience-card > p,
+body.dark .skill-card > p {
   color: #b0b0b0;
 }
 body.dark .education-location,
 body.dark .degree {
   color: #d0d0d0;
 } /* Specific education text */
+
+/* Dark mode specific experience text (outside details) */
+body.dark .experience-card .company-details,
+body.dark .experience-card .location,
+body.dark .experience-card .dates {
+    color: #d0d0d0;
+}
+
+
+/* Dark mode details section */
 body.dark .details {
   color: #b0b0b0;
   border-top-color: #444;
-} /* Details section */
+}
+/* Dark mode text inside details */
+body.dark .details p {
+    color: #b0b0b0;
+}
 body.dark .details strong {
   color: #ddd;
 }
-body.dark .project-card a,
-body.dark .details a {
+body.dark .details a { /* Target links inside details */
   color: #74c0fc;
-} /* Links */
-body.dark .education-card.active, /* Active card states */
+}
+/* Dark mode experience list items inside details */
+body.dark .experience-card .details .responsibilities li {
+    color: #b0b0b0;
+}
+
+/* Dark mode active card states */
+body.dark .education-card.active,
 body.dark .project-card.active,
 body.dark .certification-card.active,
+body.dark .experience-card.active, /* Added experience active */
 body.dark .skill-card.active {
   background-color: #3a3a3a;
 } /* Consistent dark active */
 
 /* Dark mode contact form */
 body.dark #contact {
-  background-color: transparent;
+  background-color: transparent; /* Keep section background consistent */
 }
 body.dark form {
   background-color: #2c2c2c;
@@ -148,24 +173,24 @@ body.dark form textarea:focus {
   box-shadow: 0 0 0 3px rgba(77, 171, 247, 0.3);
 }
 body.dark form button[type="submit"] {
-  background-color: #0d6efd;
+  background-color: #0d6efd; /* Use a suitable dark mode primary color */
   color: #fff;
 }
 body.dark form button[type="submit"]:hover:not(:disabled) {
-  background-color: #0a58ca;
+  background-color: #0a58ca; /* Darker shade for hover */
 }
 body.dark form button[type="submit"].sending {
   background-color: #555;
   color: #ccc;
 }
 body.dark form button[type="submit"].sent {
-  background-color: #28a745;
+  background-color: #28a745; /* Green for success */
   color: #fff;
 }
 body.dark .form-message.error {
-  background-color: #5c1a1a;
-  color: #f8d7da;
-  border-color: #a94442;
+  background-color: #5c1a1a; /* Dark red background */
+  color: #f8d7da; /* Light text */
+  border-color: #a94442; /* Darker border */
 }
 
 /* Dark mode footer & scroll */
@@ -174,11 +199,11 @@ body.dark footer {
   color: #ccc;
 }
 body.dark .scroll-to-top {
-  background-color: #4dabf7;
-  color: #1a1a1a;
+  background-color: #4dabf7; /* Use accent color */
+  color: #1a1a1a; /* Dark text for contrast */
 }
 body.dark .scroll-to-top:hover {
-  background-color: #74c0fc;
+  background-color: #74c0fc; /* Lighter accent on hover */
 }
 
 /* --- End Dark Mode Styles --- */
@@ -213,10 +238,13 @@ header nav {
 header nav ul {
   list-style: none;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  overflow-x: auto; /* Allow scrolling on small screens if needed */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
 }
 header nav ul li {
-  margin-left: 25px;
+  margin-left: 20px; /* Reduced margin slightly */
 }
 header nav ul li:first-child {
   margin-left: 0;
@@ -228,7 +256,8 @@ header nav ul li a {
   transition: color 0.3s ease, border-bottom-color 0.3s ease;
   padding-bottom: 5px;
   border-bottom: 2px solid transparent;
-  white-space: nowrap;
+  white-space: nowrap; /* Ensure links don't wrap */
+  font-size: 0.95rem; /* Slightly smaller font if needed */
 }
 header nav ul li a:hover,
 header nav ul li a.active {
@@ -239,8 +268,8 @@ header nav ul li a.active {
   width: 40px;
   height: 40px;
   opacity: 0.7;
-  margin-left: auto;
-  flex-shrink: 0;
+  margin-left: auto; /* Pushes toggle button to the right */
+  flex-shrink: 0; /* Prevents shrinking */
 }
 .header-decoration path {
   transition: fill 0.3s ease;
@@ -253,11 +282,13 @@ header nav ul li a.active {
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.3s ease, border-color 0.3s ease;
-  flex-shrink: 0;
+  flex-shrink: 0; /* Prevents shrinking */
+  margin-left: 15px; /* Add some space */
 }
 #darkModeToggle:hover {
   background-color: #eee;
 }
+
 
 /* Hero Section */
 #hero {
@@ -281,12 +312,12 @@ header nav ul li a.active {
 }
 #typing {
   color: #007bff;
-  min-height: 1.3em;
-  display: inline-block;
-  border-right: 3px solid #555;
+  min-height: 1.3em; /* Ensure space even when empty */
+  display: inline-block; /* Or block if it should take full width */
+  border-right: 3px solid #555; /* Cursor */
   animation: blinkCursor 0.75s step-end infinite;
   padding-right: 2px;
-  line-height: inherit;
+  line-height: inherit; /* Match h1 line height */
 }
 @keyframes blinkCursor {
   from,
@@ -294,7 +325,7 @@ header nav ul li a.active {
     border-color: transparent;
   }
   50% {
-    border-color: inherit;
+    border-color: inherit; /* Use current text color or a fixed color */
   }
 }
 .hero-content .resume-summary {
@@ -316,10 +347,10 @@ header nav ul li a.active {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: #eef2ff;
-  color: #4338ca;
+  background-color: #eef2ff; /* Light blue background */
+  color: #4338ca; /* Dark blue text */
   padding: 8px 15px;
-  border-radius: 20px;
+  border-radius: 20px; /* Pill shape */
   text-decoration: none;
   font-weight: 500;
   font-size: 0.9rem;
@@ -328,19 +359,19 @@ header nav ul li a.active {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 .contact-link svg {
-  fill: #4f46e5;
+  fill: #4f46e5; /* Slightly different blue for icon */
   transition: fill 0.3s ease;
-  width: 18px;
-  height: 18px;
+  width: 18px; /* Explicit size */
+  height: 18px; /* Explicit size */
 }
 .contact-link:hover {
-  background-color: #e0e7ff;
-  color: #3730a3;
-  transform: translateY(-2px);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  background-color: #e0e7ff; /* Slightly darker blue on hover */
+  color: #3730a3; /* Darker text on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08); /* Enhanced shadow */
 }
 .contact-link:hover svg {
-  fill: #3730a3;
+  fill: #3730a3; /* Darker icon on hover */
 }
 .hero-image {
   flex: 0.8;
@@ -350,13 +381,14 @@ header nav ul li a.active {
 /* Updated Hero Image Styles */
 .hero-image img {
   max-width: 100%; /* Allow full width within its container */
-  height: auto;
+  height: auto; /* Maintain aspect ratio */
   border-radius: 8px; /* Subtle rounding, not circle */
   /* border: none; Removed border */
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Adjusted shadow */
   object-fit: cover; /* Cover the area if aspect ratio differs */
   max-height: 350px; /* Optional: constrain height */
 }
+
 
 /* Section Base Styles */
 section {
@@ -383,6 +415,7 @@ section h2::after {
 .education-container,
 .projects-container,
 .certifications-container,
+.experience-container, /* Added experience container */
 .skills-container {
   display: grid;
   gap: 1.5rem;
@@ -390,12 +423,13 @@ section h2::after {
 }
 /* Default to 1 column, adjust in media queries if needed */
 .education-container,
-.certifications-container {
+.certifications-container,
+.experience-container { /* Added experience container */
   grid-template-columns: 1fr;
 }
 .projects-container {
-  grid-template-columns: 1fr;
-} /* Kept 1 column */
+  grid-template-columns: 1fr; /* Default to 1 column */
+}
 .skills-container {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
@@ -404,73 +438,95 @@ section h2::after {
 .education-card,
 .project-card,
 .certification-card,
+.experience-card, /* Added experience card */
 .skill-card {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   padding: 1.5rem;
-  cursor: pointer;
+  cursor: pointer; /* Indicate interactivity */
   transition: transform 0.3s ease, box-shadow 0.3s ease,
     background-color 0.3s ease;
   overflow: hidden;
-  position: relative; /* For potential absolute elements inside like icons */
+  position: relative; /* For potential absolute elements inside */
 }
 
+/* Card Hover Effect */
 .education-card:hover,
 .project-card:hover,
 .certification-card:hover,
+.experience-card:hover, /* Added experience card */
 .skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Stronger shadow */
 }
 
 /* Card Title Styles */
 .education-institution,
 .project-name,
 .certification-name,
+.experience-card .job-title, /* Added experience title */
 .skill-name {
   font-size: 1.3rem; /* Consistent title size */
   font-weight: 600;
   color: #007bff; /* Accent color */
   margin-bottom: 8px;
-  display: block;
+  display: block; /* Ensure it takes its own line */
 }
 /* Specific overrides if needed */
-.education-institution {
-  margin-bottom: 2px;
-} /* Less space after institution */
-.skill-name {
-  font-size: 1.1rem;
-  color: #0056b3;
-} /* Skill name style kept */
+.education-institution { margin-bottom: 2px; } /* Less space after institution */
+.experience-card .job-title { margin-bottom: 4px; } /* Less space after job title */
+.skill-name { font-size: 1.1rem; color: #0056b3; } /* Skill name style kept */
 
-/* Card Subtitle/Text Styles */
+/* Card Subtitle/Text Styles (Visible Part) */
 .education-location,
 .degree {
   font-size: 1rem;
   color: #555;
   margin-bottom: 4px;
 }
-.education-card p,
-.project-card p,
-.certification-card p {
+/* General paragraph styling for card (visible part) */
+.education-card > p, /* Target direct children p tags */
+.project-card > p,
+.certification-card > p,
+.experience-card > p,
+.skill-card > p {
   color: #555;
   margin-bottom: 10px;
 }
+/* Reduce margin on last visible paragraph before details div in experience card */
+.experience-card > p.dates {
+    margin-bottom: 0;
+}
+
+/* Specific Experience Card Text Styles (Visible Part) */
+.experience-card .company-details,
+.experience-card .location {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2px;
+}
+.experience-card .dates {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 12px; /* Space before details expand */
+}
+
 
 /* Generic Details Section (Hidden by default) */
 .details {
   font-size: 0.95rem;
   color: #666;
-  max-height: 0;
-  opacity: 0;
+  max-height: 0; /* Hidden */
+  opacity: 0; /* Hidden */
   overflow: hidden;
   transition: max-height 0.5s ease-out, opacity 0.4s ease-in 0.1s,
-    margin-top 0.5s ease-out, padding-top 0.5s ease-out;
+    margin-top 0.5s ease-out, padding-top 0.5s ease-out, border-top-color 0.5s ease;
   margin-top: 0;
   padding-top: 0; /* Start padding at 0 */
   border-top: 1px solid transparent; /* Start border transparent */
 }
+/* Text styling inside details */
 .details p {
   margin-bottom: 8px;
   line-height: 1.5;
@@ -487,11 +543,29 @@ section h2::after {
 .details a:hover {
   text-decoration: underline;
 }
+/* Styling for the experience list *inside* the details div */
+.experience-card .details .responsibilities {
+  list-style: disc; /* Use standard bullets */
+  margin-top: 1rem; /* Match margin-top added when details expand */
+  padding-left: 20px; /* Indent list */
+  font-size: 0.95rem;
+  color: #555; /* Use general card text color */
+  margin-bottom: 0; /* Remove default ul margin */
+}
+.experience-card .details .responsibilities li {
+  margin-bottom: 8px; /* Space between bullet points */
+  line-height: 1.5;
+}
+.experience-card .details .responsibilities li:last-child {
+    margin-bottom: 0; /* Remove margin from last item */
+}
+
 
 /* Active Card State */
 .education-card.active,
 .project-card.active,
 .certification-card.active,
+.experience-card.active, /* Added experience card active */
 .skill-card.active {
   background-color: #f8f9fa; /* Slightly off-white active */
 }
@@ -499,14 +573,16 @@ section h2::after {
   background-color: #e7f3ff;
 } /* Keep skill card different */
 
+/* Reveal details for active cards */
 .education-card.active .details,
 .project-card.active .details,
 .certification-card.active .details,
+.experience-card.active .details, /* Added experience details active */
 .skill-card.active .details {
-  max-height: 500px; /* Adjust max height as needed */
+  max-height: 500px; /* Adjust max height as needed for content */
   opacity: 1;
-  margin-top: 1rem;
-  padding-top: 1rem; /* Add padding when revealed */
+  margin-top: 1rem; /* Add space */
+  padding-top: 1rem; /* Add padding */
   border-top-color: #eee; /* Show border */
 }
 
@@ -528,12 +604,12 @@ form {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  position: relative;
+  position: relative; /* For potential absolute positioning inside */
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 form label {
   font-weight: 500;
-  margin-bottom: -5px;
+  margin-bottom: -5px; /* Pull label closer to input */
   color: #444;
 }
 form input[type="text"],
@@ -543,19 +619,19 @@ form textarea {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
-  font-family: inherit;
+  font-family: inherit; /* Use body font */
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 form input[type="text"]:focus,
 form input[type="email"]:focus,
 form textarea:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
-  outline: none;
+  border-color: #007bff; /* Highlight border */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Add focus glow */
+  outline: none; /* Remove default outline */
 }
 form textarea {
   min-height: 150px;
-  resize: vertical;
+  resize: vertical; /* Allow vertical resize only */
 }
 
 /* Submit Button Styles & States */
@@ -569,7 +645,7 @@ form button[type="submit"] {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease, opacity 0.3s ease;
-  align-self: center;
+  align-self: center; /* Center button */
   margin-top: 10px;
   position: relative; /* Needed for pseudo-elements if used */
   overflow: hidden; /* Hide overflow during transitions */
@@ -577,11 +653,11 @@ form button[type="submit"] {
   text-align: center;
 }
 form button[type="submit"]:hover:not(:disabled) {
-  background-color: #0056b3;
-  transform: translateY(-2px);
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift */
 }
 form button[type="submit"]:disabled {
-  opacity: 0.7;
+  opacity: 0.7; /* Dim when disabled */
   cursor: not-allowed;
 }
 /* Sending State */
@@ -594,13 +670,13 @@ form button[type="submit"].sending {
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  background-color: #fff;
-  color: #fff;
+  background-color: #fff; /* Dot color */
+  color: #fff; /* Fallback color */
   animation: dotElastic 1s infinite linear;
-  display: inline-block;
+  display: inline-block; /* Allows positioning with text */
   vertical-align: middle;
   margin-left: 5px;
-  top: -2px;
+  top: -2px; /* Adjust vertical alignment */
 }
 .dot-elastic::before,
 .dot-elastic::after {
@@ -610,7 +686,7 @@ form button[type="submit"].sending {
   top: 0;
 }
 .dot-elastic::before {
-  left: -15px;
+  left: -15px; /* Position left dot */
   width: 10px;
   height: 10px;
   border-radius: 5px;
@@ -619,7 +695,7 @@ form button[type="submit"].sending {
   animation: dotElasticBefore 1s infinite linear;
 }
 .dot-elastic::after {
-  left: 15px;
+  left: 15px; /* Position right dot */
   width: 10px;
   height: 10px;
   border-radius: 5px;
@@ -627,56 +703,27 @@ form button[type="submit"].sending {
   color: #fff;
   animation: dotElasticAfter 1s infinite linear;
 }
+/* Keyframes for the dot animation */
 @keyframes dotElasticBefore {
-  0% {
-    transform: scale(1, 1);
-  }
-  25% {
-    transform: scale(1, 1.5);
-  }
-  50% {
-    transform: scale(1, 0.67);
-  }
-  75% {
-    transform: scale(1, 1);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
+  0% { transform: scale(1, 1); }
+  25% { transform: scale(1, 1.5); }
+  50% { transform: scale(1, 0.67); }
+  75% { transform: scale(1, 1); }
+  100% { transform: scale(1, 1); }
 }
 @keyframes dotElastic {
-  0% {
-    transform: scale(1, 1);
-  }
-  25% {
-    transform: scale(1, 1);
-  }
-  50% {
-    transform: scale(1, 1.5);
-  }
-  75% {
-    transform: scale(1, 1);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
+  0% { transform: scale(1, 1); }
+  25% { transform: scale(1, 1); }
+  50% { transform: scale(1, 1.5); }
+  75% { transform: scale(1, 1); }
+  100% { transform: scale(1, 1); }
 }
 @keyframes dotElasticAfter {
-  0% {
-    transform: scale(1, 1);
-  }
-  25% {
-    transform: scale(1, 1);
-  }
-  50% {
-    transform: scale(1, 0.67);
-  }
-  75% {
-    transform: scale(1, 1.5);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
+  0% { transform: scale(1, 1); }
+  25% { transform: scale(1, 1); }
+  50% { transform: scale(1, 0.67); }
+  75% { transform: scale(1, 1.5); }
+  100% { transform: scale(1, 1); }
 }
 /* Sent State */
 form button[type="submit"].sent {
@@ -691,21 +738,21 @@ form button[type="submit"].sent {
   border-radius: 5px;
   text-align: center;
   font-weight: 500;
-  opacity: 0;
-  max-height: 0;
+  opacity: 0; /* Hidden by default */
+  max-height: 0; /* Hidden by default */
   overflow: hidden;
   transition: opacity 0.4s ease, max-height 0.4s ease, margin-top 0.4s ease,
     padding 0.4s ease;
   padding: 0 12px; /* Animate padding too */
 }
 .form-message.error {
-  opacity: 1;
-  max-height: 100px;
+  opacity: 1; /* Show on error */
+  max-height: 100px; /* Allow space for message */
   margin-top: 15px;
-  padding: 12px;
-  background-color: #f8d7da;
-  color: #721c24;
-  border: 1px solid #f5c6cb;
+  padding: 12px; /* Apply padding */
+  background-color: #f8d7da; /* Red background for error */
+  color: #721c24; /* Dark red text */
+  border: 1px solid #f5c6cb; /* Red border */
 }
 /* Removed success style as feedback is on button */
 
@@ -715,7 +762,7 @@ footer {
   color: #ccc;
   text-align: center;
   padding: 25px 0;
-  margin-top: 60px;
+  margin-top: 60px; /* Space before footer */
 }
 
 /* Scroll-to-Top Button */
@@ -726,26 +773,27 @@ footer {
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 50%;
+  border-radius: 50%; /* Circular */
   width: 45px;
   height: 45px;
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Arrow size */
   cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
+  opacity: 0; /* Hidden by default */
+  visibility: hidden; /* Hidden by default */
   transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s,
-    transform 0.3s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  transform: translateY(20px);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transform 0.3s ease; /* Smooth transitions */
+  display: flex; /* Center icon */
+  justify-content: center; /* Center icon */
+  align-items: center; /* Center icon */
+  z-index: 1000; /* Keep on top */
+  transform: translateY(20px); /* Start off-screen */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Add shadow */
 }
 .scroll-to-top:hover {
-  opacity: 1 !important;
-  background-color: #0056b3;
+  opacity: 1 !important; /* Ensure hover makes it fully visible */
+  background-color: #0056b3; /* Darker on hover */
 }
+
 
 /* Media Queries */
 @media (max-width: 992px) {
@@ -756,34 +804,46 @@ footer {
     font-size: 2.5rem;
   }
   header nav {
-    justify-content: flex-end;
+    justify-content: flex-end; /* Move nav to right */
   }
   .header-decoration {
-    display: none;
+    display: none; /* Hide decoration on medium screens */
+  }
+  .projects-container { /* Example: 2 columns for projects */
+     grid-template-columns: repeat(2, 1fr);
+  }
+  .skills-container { /* Adjust skill columns if needed */
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
+
 @media (max-width: 768px) {
   header .container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: row; /* Keep row layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: space-between; /* Space out items */
   }
   header .personal {
-    order: 1;
+    order: 1; /* First item */
     font-size: 1.3rem;
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Space below if nav wraps */
+    flex-basis: auto; /* Allow natural width */
   }
   #darkModeToggle {
-    order: 2;
+    order: 2; /* Second item */
+    margin-left: 0; /* Remove margin override */
   }
   header nav {
-    order: 3;
-    width: 100%;
-    justify-content: center;
-    margin-top: 10px;
+    order: 3; /* Third item */
+    width: 100%; /* Take full width */
+    justify-content: center; /* Center nav links */
+    margin-top: 10px; /* Space above nav */
+    overflow-x: auto; /* Allow horizontal scroll for links */
   }
   header nav ul {
     padding: 0;
+    flex-wrap: nowrap; /* Prevent wrapping inside scroll */
+    justify-content: center; /* Center items if space allows */
   }
   header nav ul li {
     margin: 0 10px;
@@ -797,38 +857,42 @@ footer {
     gap: 30px;
   }
   .hero-content {
-    order: 2;
+    order: 2; /* Text below image */
   }
   .hero-image {
-    order: 1;
-    text-align: center;
+    order: 1; /* Image first */
+    text-align: center; /* Center image within its div */
+    width: 100%; /* Ensure image container takes width */
   }
   .hero-image img {
-    max-width: 80%;
-    max-height: 250px;
-  } /* Adjust wallpaper on mobile */
+    max-width: 80%; /* Reduce image size */
+    max-height: 250px; /* Adjust wallpaper on mobile */
+  }
   .contact-info {
-    justify-content: center;
+    justify-content: center; /* Center contact links */
   }
   section h2 {
     font-size: 1.8rem;
   }
+  /* Ensure all card containers are single column */
   .skills-container,
   .projects-container,
   .education-container,
+  .experience-container,
   .certifications-container {
     grid-template-columns: 1fr;
-  } /* All single column */
+  }
   form {
     padding: 20px;
   }
 }
+
 @media (max-width: 576px) {
   header .personal {
     font-size: 1.2rem;
   }
   header nav ul li {
-    margin: 0 8px;
+    margin: 0 8px; /* Even less space between links */
   }
   header nav ul li a {
     font-size: 0.9rem;
@@ -850,13 +914,22 @@ footer {
     width: 16px;
     height: 16px;
   }
+  /* Card titles smaller */
   .education-institution,
   .project-name,
-  .certification-name {
-    font-size: 1.2rem;
+  .certification-name,
+  .experience-card .job-title,
+  .skill-name {
+    font-size: 1.15rem;
   }
+  /* Adjust details font size */
+   .details,
+   .experience-card .details .responsibilities {
+       font-size: 0.9rem;
+   }
+
   form {
-    max-width: 100%;
+    max-width: 100%; /* Use full width */
     padding: 15px;
   }
   form button[type="submit"] {
