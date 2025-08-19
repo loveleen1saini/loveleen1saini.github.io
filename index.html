@@ -37,7 +37,7 @@
     <div class="container">
       <div class="hero-content">
         <h1>Hey! I Am <br><span id="typing"></span></h1>
-        <p class="resume-summary">A highly motivated and results-oriented professional with a strong background in Business Analysis, Data Analysis, and Project Management. Seeking a challenging role where I can utilize my skills to contribute to the success of a dynamic organization.</p>
+        <p class="resume-summary">I am a Data Analyst skilled in Python, SQL, Tableau, Power BI, and Excel, with a passion for turning raw data into actionable insights that drive business growth. I specialize in data visualization, predictive modelling, and automation, enabling smarter decisions, improved efficiency, and measurable impact across teams. Certified in Microsoft technologies, I thrive in fast-paced environments where analytics fuels innovation and strategy.</p>
         <div class="contact-info">
           <a href="mailto:sloveleen288@gmail.com" class="contact-link">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
@@ -70,18 +70,19 @@
       <h2>Work Experience</h2>
       <div class="experience-container">
         <div class="experience-card">
-          <span class="job-title">Business Analyst</span>
+          <span class="job-title">Data Analyst</span>
           <p class="company-details">Angel One · Permanent Full-time</p>
           <p class="location">Mumbai, Maharashtra, India · Hybrid</p>
           <p class="dates">May 2022 - Jul 2023 · (1 yr 3 mos)</p>
           <div class="details">
             <ul class="responsibilities">
-              <li>Developed and maintained Power BI dashboards tracking client onboarding funnel metrics, improving visibility and reducing average activation time by 12%.</li>
-              <li>Designed Visio process maps for account opening workflows, identifying process gaps that cut onboarding errors by 8%.</li>
-              <li>Extracted client behaviour and transaction data using SQL to generate monthly executive reports on platform usage trends.</li>
-              <li>Built Excel-based financial models to forecast quarterly client acquisition growth, helping the marketing team plan targeted campaigns.</li>
-              <li>Collaborated with Product Managers to document feature requirements, prioritize enhancements, and support UAT for new trading app releases.</li>
-              <li>Supported compliance reporting by automating internal audit data pulls, reducing manual reporting time by 20%.</li>
+              <li>As a Data Analyst, I transformed complex business data into actionable insights, enabling strategic decision-making across client onboarding, product, and marketing teams. Key achievements include:</li>
+              <li>- Performed advanced data analysis using Python (Pandas, NumPy, Matplotlib, Seaborn) and SQL, identifying client behavior trends and platform usage patterns that boosted customer engagement by 15%.</li>
+              <li>- Developed and managed interactive dashboards in Tableau and Power BI, monitoring client onboarding, trading activity, and KPIs, which reduced activation time by 12% and improved executive decision-making.</li>
+              <li>- Built predictive models and financial forecasts in Python and Excel, supporting targeted marketing campaigns and increasing quarterly client acquisition.</li>
+              <li>- Automated compliance reporting and audit data pipelines, reducing manual reporting effort by 20%, enhancing accuracy, and ensuring regulatory readiness.</li>
+              <li>- Collaborated with Product and Operations teams to optimize workflows, define feature requirements, and support UAT for platform releases, streamlining account opening and cutting onboarding errors by 8%.</li>
+              <li>- Visualized complex datasets and KPIs for executive reporting, delivering actionable insights that drove strategic initiatives and operational efficiency.</li>
             </ul>
           </div>
         </div>
@@ -262,13 +263,13 @@
         card.addEventListener('click', (e) => {
           // Prevent expansion if clicking on a link within the card's details
           if (e.target.closest('.details a')) {
-                // console.log('Link inside details clicked, preventing card toggle.'); // Debug log
-                return;
+              // console.log('Link inside details clicked, preventing card toggle.'); // Debug log
+              return;
             }
             // Also prevent if clicking a link directly within the card but outside details (if any)
             if (e.target.tagName === 'A' && !e.target.closest('.details')) {
-                 // console.log('Direct link clicked, preventing card toggle.'); // Debug log
-                 return;
+                // console.log('Direct link clicked, preventing card toggle.'); // Debug log
+                return;
             }
 
           // console.log('Card clicked:', card); // Debug log
@@ -278,8 +279,8 @@
             const activeCardsInContainer = container.querySelectorAll(`${selector}.active`);
             activeCardsInContainer.forEach(activeCard => {
               if (activeCard !== card) {
-                 // console.log('Collapsing other active card:', activeCard); // Debug log
-                 activeCard.classList.remove('active');
+                  // console.log('Collapsing other active card:', activeCard); // Debug log
+                  activeCard.classList.remove('active');
               }
             });
           } else {
@@ -341,6 +342,15 @@
     }, {
       name: "Confluence",
       details: "Experience in using Confluence for collaboration, knowledge management, and documentation."
+    }, {
+      name: "Python (Programming Language)",
+      details: "Strong proficiency in Python for data manipulation, analysis, and automation, including libraries like Pandas and NumPy."
+    }, {
+      name: "Tableau",
+      details: "Expertise in creating interactive dashboards, reports, and data visualizations with Tableau."
+    }, {
+      name: "Continuous Integration and Continuous Delivery (CI/CD)",
+      details: "Experience with CI/CD principles and tools to automate data pipelines and reporting workflows."
     }];
     const skillsContainer = document.querySelector('.skills-container');
 
